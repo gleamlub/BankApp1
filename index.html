@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+    <div id="calculator">
+    <input type="text" id="result" value="0"><br><br>
+    <button class="a" id="one" value="1" onclick="fun1('1')">1</button>
+    <button class="a" value="1" onclick="fun1('2')">2</button>
+    <button class="a" value="1" onclick="fun1('3')">3</button>
+    <button class="a" value="1" onclick="fun2()">=</button><br><br>
+    <button class="a" value="1" onclick="fun1('4')">4</button>
+    <button class="a" value="1" onclick="fun1('5')">5</button>
+    <button class="a" value="1" onclick="fun1('6')">6</button>
+    <button class="a" value="1" onclick="fun3()">Clear</button><br><br>
+    <button class="a" value="1" onclick="fun1('7')">7</button>
+    <button class="a" value="1" onclick="fun1('8')">8</button>
+    <button class="a" value="1" onclick="fun1('9')">9</button>
+    <button class="a" value="1" onclick="fun1('.')">.</button><br><br>
+    <button class="a" value="1" onclick="fun1('+')">+</button>
+    <button class="a" value="1" onclick="fun1('-')">-</button>
+    <button class="a" value="1" onclick="fun1('*')">*</button>
+    <button class="a" value="1" onclick="fun1('/')">/</button>
+    </div>
+    <script>
+        var defaultvalue = true;
+            function fun1(value)
+            {
+                var resultInput = document.getElementById("result");
+                if(defaultvalue)
+                {
+                    resultInput.value="";
+                    defaultvalue = false;
+                }
+                document.getElementById("result").value+=value;
+            }
+            function fun2()
+            {
+                var result = eval(document.getElementById("result").value);
+                document.getElementById("result").value = result;
+            }
+            function fun3()
+             {
+              document.getElementById("result").value = "0";
+              defaultvalue = true;
+             }
+    </script>
+</body>
+</html>
